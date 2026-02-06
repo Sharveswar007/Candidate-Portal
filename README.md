@@ -1,8 +1,8 @@
 <div align="center">
 
-# ⚡ TalentPulse
+# 🚀 HIRENEX - Candidate Portal
 
-### Multi-Modal Assessment Engine for Job Readiness
+### AI-Powered Recruitment Assessment Platform
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -11,9 +11,9 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS_4-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Groq](https://img.shields.io/badge/Groq-Llama_3.3-FF6B35?style=for-the-badge)](https://groq.com/)
 
-*Comprehensive assessment platform featuring scenario-based MCQs, coding sandbox, text evaluations, and psychometric analysis - all powered by AI.*
+*Enterprise-grade candidate assessment platform with AI-powered proctoring, multi-modal evaluations, resume analysis, and job matching.*
 
-[📖 Features](#-features) • [🛠️ Installation](#%EF%B8%8F-installation) • [🔑 API Keys](#-api-keys-required) • [📁 Project Structure](#-project-structure)
+[🎯 Features](#-features) • [🔒 Proctoring](#-advanced-proctoring-system) • [🛠️ Installation](#%EF%B8%8F-installation) • [📁 Structure](#-project-structure)
 
 </div>
 
@@ -21,197 +21,331 @@
 
 ## 📋 Table of Contents
 
-- [About](#-about)
+- [Overview](#-overview)
 - [Features](#-features)
+- [Advanced Proctoring System](#-advanced-proctoring-system)
+- [Assessment Engine](#-assessment-engine)
 - [Tech Stack](#-tech-stack)
 - [Installation](#%EF%B8%8F-installation)
 - [Environment Variables](#-environment-variables)
 - [Database Setup](#-database-setup)
-- [API Keys Required](#-api-keys-required)
-- [Project Structure](#-project-structure)
 - [API Endpoints](#-api-endpoints)
-- [Key Features Deep Dive](#-key-features-deep-dive)
+- [Project Structure](#-project-structure)
 - [Deployment](#-deployment)
 
 ---
 
-## 🎯 About
+## 🎯 Overview
 
-TalentPulse is a comprehensive multi-modal assessment engine designed to evaluate job readiness through various input types. The platform provides a versatile testing interface that supports multiple assessment methods to build a complete profile of a candidate's professional capabilities.
+HIRENEX is a comprehensive AI-powered recruitment assessment platform designed to streamline the hiring process. The candidate portal enables job seekers to browse opportunities, submit resumes, and complete rigorous multi-stage assessments - all while being monitored by an enterprise-grade proctoring system.
 
-### Assessment Modalities
+### Why HIRENEX?
 
-| Assessment Type | Description | Evaluation Method |
-|-----------------|-------------|-------------------|
-| Scenario-Based MCQs | Workplace situation questions | Decision-making & professional judgment |
-| Coding Sandbox | Functional IDE with code execution | Real-time grading against test cases |
-| Text Responses | Open-ended questions | AI analysis of communication & logic |
-| Psychometric Sliders | Self-assessment scales | Personality profile & work style |
+| Feature | Benefit |
+|---------|---------|
+| **AI-Powered Assessments** | Dynamic question generation tailored to job requirements |
+| **Real-Time Proctoring** | Face detection, hand tracking, and browser monitoring |
+| **Multi-Modal Evaluation** | MCQs, coding challenges, text responses & psychometric tests |
+| **Smart Resume Analysis** | AI parsing with job description matching |
+| **Secure Environment** | Anti-cheat mechanisms with integrity scoring |
 
 ---
 
 ## ✨ Features
 
+### 📄 **AI Resume Analysis**
+- **Intelligent Parsing**: Extract skills, experience, education, and certifications using Groq AI
+- **Job Matching Score**: Automated compatibility scoring against job descriptions
+- **Strength/Weakness Analysis**: AI-generated insights on candidate profiles
+- **PDF/Document Support**: Parse multiple resume formats with unpdf
+
+### 💼 **Job Board & Applications**
+- Browse and filter open positions
+- Detailed job descriptions with requirements
+- One-click applications with resume attachment
+- Application status tracking and progress monitoring
+
 ### 📋 **Scenario-Based MCQs**
 - Real-world workplace scenarios with multiple-choice responses
-- Evaluates professional judgment and decision-making
 - Categories: Workplace Ethics, Team Dynamics, Client Relations, Priority Management
-- Immediate feedback with explanations
-- AI-generated diverse question bank
+- AI-generated diverse question bank using Groq LLM
+- Immediate feedback with detailed explanations
 
 ### 💻 **Coding Sandbox**
-- Full-featured IDE with Monaco Editor (VS Code's editor)
+- Full-featured IDE powered by **Monaco Editor** (VS Code's engine)
 - **Real code execution** using [Piston API](https://github.com/engineer-man/piston)
-- Supports 50+ languages: JavaScript, Python, Java, C++, TypeScript, and more
-- AI-generated coding problems with test cases
-- Hidden test case verification
-- Execution time and memory tracking
+- **50+ programming languages** supported: JavaScript, Python, Java, C++, TypeScript, Go, Rust, and more
+- AI-generated coding problems with visible and hidden test cases
+- Performance metrics: execution time, memory usage, and complexity analysis
 
 ### ✍️ **Text-Based Responses**
 - Open-ended questions for written communication evaluation
-- AI-powered analysis of:
+- AI-powered analysis scoring:
   - Communication clarity
   - Logical reasoning
   - Relevance to question
   - Professional tone
-- Categories: Communication, Problem Solving, Leadership, Ethics, Adaptability
-- Timed responses with progress tracking
+- Timed responses with live progress tracking
 
-### 📊 **Psychometric Mapping (Slider-Based)**
-- Quantitative self-assessment inputs
-- Builds comprehensive personality profile
+### 📊 **Psychometric Profiling**
+- Big Five personality assessment (OCEAN model)
+- Quantitative slider-based self-assessment
 - Dimensions measured:
   - Openness to Experience
   - Conscientiousness
   - Extraversion
   - Agreeableness
   - Emotional Stability
-  - Leadership Style
-  - Problem-Solving Approach
-  - Adaptability
+- Leadership style and problem-solving approach mapping
 
-### 📈 **Comprehensive Results Dashboard**
-- Overall job-readiness score
-- Breakdown by assessment type
-- Personality profile visualization
-- Assessment history tracking
-- Recommendations for improvement
+### 📈 **Results Dashboard**
+- Comprehensive job-readiness score
+- Score breakdown by assessment type
+- Personality radar chart visualization
+- Proctoring integrity summary
+- AI-generated improvement recommendations
+
+---
+
+## 🔒 Advanced Proctoring System
+
+HIRENEX features an enterprise-grade proctoring solution using **MediaPipe** and **TensorFlow.js** for real-time monitoring.
+
+### Face Detection (MediaPipe BlazeFace)
+| Detection Type | Severity | Description |
+|----------------|----------|-------------|
+| `NO_FACE` | Medium | Face not detected in frame |
+| `MULTI_FACE` | Critical | Multiple faces detected (auto-flag) |
+| `FACE_LOST` | Medium | Face disappeared after detection |
+| `LOOKING_AWAY` | Medium | Gaze directed away from screen |
+| `RAPID_MOVEMENT` | Low | Suspicious head movements |
+
+### Hand Tracking (MediaPipe Hands)
+| Detection Type | Severity | Description |
+|----------------|----------|-------------|
+| `HAND_DETECTED` | Low | Hands visible in frame |
+| `HAND_COVERING_FACE` | High | Hands obstructing face |
+| `PHONE_GESTURE` | Critical | Phone holding gesture detected |
+
+### Browser Monitoring
+| Event Type | Severity | Description |
+|------------|----------|-------------|
+| `TAB_SWITCH` | High | Candidate switched browser tabs |
+| `WINDOW_BLUR` | Medium | Browser window lost focus |
+| `FULLSCREEN_EXIT` | Medium | Exited fullscreen mode |
+| `COPY/PASTE/CUT` | Medium-High | Clipboard operations detected |
+| `DEVTOOLS_ATTEMPT` | Critical | Developer tools access attempt |
+
+### Integrity Scoring
+- Real-time integrity score calculation (0-100)
+- Configurable deduction weights per violation
+- Automatic disqualification threshold for critical violations
+- Complete event log with timestamps for HR review
+
+---
+
+## 🎓 Assessment Engine
+
+### Assessment Flow
+```
+1. Job Application → 2. Resume Upload → 3. AI Analysis → 4. Assessment Link
+                                                              ↓
+5. Identity Verification → 6. Proctoring Setup → 7. Multi-Stage Assessment
+                                                              ↓
+8. Technical MCQs → 9. Coding Challenge → 10. Text Responses → 11. Psychometric
+                                                              ↓
+12. AI Scoring → 13. Results Dashboard → 14. HR Review
+```
+
+### Question Generation
+- Dynamic AI generation based on job requirements
+- Difficulty scaling based on candidate performance
+- Domain-specific question banks (Tech, Finance, Healthcare, etc.)
+- Anti-repetition mechanisms for retakes
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Category | Technology |
-|----------|------------|
-| **Framework** | Next.js 16 (App Router) |
-| **Language** | TypeScript 5.0 |
-| **UI Library** | React 19 |
-| **Styling** | Tailwind CSS 4, Framer Motion, GSAP |
-| **Database** | Supabase (PostgreSQL) |
-| **Authentication** | Supabase Auth (Email/Password) |
-| **AI/LLM** | Groq API (Llama 3.3 70B) |
-| **Code Execution** | Piston API |
-| **Code Editor** | Monaco Editor |
-| **State Management** | Zustand |
-| **Data Fetching** | TanStack Query |
-| **Icons** | Lucide React |
-| **Components** | Radix UI primitives |
+### Core Framework
+| Category | Technology | Version |
+|----------|------------|---------|
+| **Framework** | Next.js (App Router) | 16.1 |
+| **Language** | TypeScript | 5.0 |
+| **UI Library** | React | 19.2 |
+| **Database** | Supabase (PostgreSQL) | Latest |
+| **Authentication** | Supabase Auth | SSR |
+
+### AI & Machine Learning
+| Service | Purpose |
+|---------|---------|
+| **Groq API** | LLM for question generation, resume analysis, scoring |
+| **MediaPipe Tasks Vision** | Real-time face detection (BlazeFace) |
+| **TensorFlow.js** | Hand pose detection and tracking |
+| **face-api.js** | Fallback face detection |
+
+### Frontend & UI
+| Technology | Purpose |
+|------------|---------|
+| **Tailwind CSS 4** | Utility-first styling |
+| **Framer Motion** | Animations and transitions |
+| **GSAP** | Advanced animations |
+| **Radix UI** | Accessible component primitives |
+| **Lucide React** | Icon system |
+| **Recharts** | Data visualization |
+
+### Developer Tools
+| Technology | Purpose |
+|------------|---------|
+| **Monaco Editor** | In-browser code editor (VS Code engine) |
+| **Piston API** | Sandboxed code execution (50+ languages) |
+| **TanStack Query** | Server state management |
+| **Zustand** | Client state management |
+| **Zod** | Runtime type validation |
+| **RecordRTC** | Video/audio recording |
 
 ---
 
 ## 🛠️ Installation
 
 ### Prerequisites
-- Node.js 18+ 
-- npm, yarn, or pnpm
-- Supabase account
-- Groq API access
+- **Node.js** 18+ (LTS recommended)
+- **npm**, **yarn**, **pnpm**, or **bun**
+- **Supabase** account (free tier available)
+- **Groq** API key (free tier available)
 
-### Steps
+### Quick Start
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/talentpulse.git
-   cd talentpulse
-   ```
+```bash
+# 1. Clone the repository
+git clone https://github.com/magi8101/candidate-portal.git
+cd candidate-portal
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
-   ```
+# 2. Install dependencies
+npm install
+# or: yarn install / pnpm install / bun install
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
+# 3. Set up environment variables
+cp .env.example .env.local
 
-4. **Configure your `.env.local`**
-   ```env
-   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-   GROQ_API_KEY=your_groq_api_key
-   TAVILY_API_KEY=your_tavily_api_key
-   ```
+# 4. Configure your .env.local (see Environment Variables section)
 
-5. **Run the development server**
-   ```bash
-   npm run dev
-   ```
+# 5. Run the development server
+npm run dev
 
-6. **Open [http://localhost:3000](http://localhost:3000)**
+# 6. Open http://localhost:3000
+```
+
+### Build for Production
+
+```bash
+# Build the application
+npm run build
+
+# Start production server
+npm run start
+```
 
 ---
 
 ## 🔐 Environment Variables
 
+Create a `.env.local` file in the root directory:
+
+```env
+# Supabase Configuration (Required)
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+
+# Groq AI (Required)
+GROQ_API_KEY=gsk_your-groq-api-key
+
+# Tavily Search (Optional - for industry insights)
+TAVILY_API_KEY=tvly-your-tavily-key
+
+# Cloudinary (Optional - for media storage)
+CLOUDINARY_URL=cloudinary://api_key:api_secret@cloud_name
+```
+
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `NEXT_PUBLIC_SUPABASE_URL` | ✅ | Supabase project URL |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | ✅ | Supabase anonymous key |
+| `NEXT_PUBLIC_SUPABASE_URL` | ✅ | Your Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | ✅ | Supabase anonymous/public key |
 | `GROQ_API_KEY` | ✅ | Groq API key for AI features |
-| `TAVILY_API_KEY` | ❌ | Optional: For web search features |
+| `TAVILY_API_KEY` | ❌ | Web search for job market data |
+| `CLOUDINARY_URL` | ❌ | Media upload and storage |
 
 ---
 
 ## 🗄️ Database Setup
 
-1. Create a new Supabase project
-2. Run the SQL schema from `supabase/schema.sql`
-3. Enable Row Level Security (RLS) policies
-4. Configure email authentication in Supabase Auth settings
+### 1. Create Supabase Project
+1. Go to [supabase.com](https://supabase.com) and create a new project
+2. Wait for the database to provision
 
-### Key Tables
+### 2. Run Migrations
+Execute the SQL files in `supabase/migrations/` in order:
+```sql
+-- Run schema.sql first
+-- Then run migrations in numerical order (002_, 003_, etc.)
+```
 
-- `profiles` - User information
-- `assessment_sessions` - Unified assessment tracking
-- `scenario_mcq_responses` - MCQ answers and scores
-- `text_responses` - Written response evaluations
-- `psychometric_responses` - Slider values per question
-- `psychometric_profiles` - Aggregated personality scores
-- `coding_challenges` - AI-generated coding problems
-- `coding_submissions` - Code submissions and results
+### 3. Key Database Tables
+
+| Table | Purpose |
+|-------|---------|
+| `profiles` | User profiles and personal information |
+| `jobs` | Job listings with requirements |
+| `applications` | Job applications with status tracking |
+| `assessment_sessions` | Unified assessment tracking |
+| `proctoring_events` | Proctoring violations and logs |
+| `scenario_mcq_responses` | MCQ answers and scores |
+| `coding_submissions` | Code submissions and results |
+| `text_responses` | Written response evaluations |
+| `psychometric_profiles` | Personality assessment scores |
+| `hiring_decisions` | AI-generated hiring recommendations |
 
 ---
 
-## 🔑 API Keys Required
+## 🚀 API Endpoints
 
-### Groq API (Required)
-- Sign up at [console.groq.com](https://console.groq.com)
-- Create an API key
-- Used for: AI question generation, response evaluation, code verification
+### Assessment APIs
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/assessment/generate` | POST | Generate assessment questions for job |
+| `/api/assessment/submit` | POST | Submit and score assessment |
+| `/api/job-assessment/generate` | POST | Generate job-specific assessment |
 
-### Supabase (Required)
-- Create project at [supabase.com](https://supabase.com)
-- Get URL and anon key from Project Settings > API
-- Used for: Database, authentication, real-time features
+### Coding Challenge APIs
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/challenges/generate` | POST | Generate AI coding problem |
+| `/api/challenges/bulk-generate` | POST | Generate multiple challenges |
+| `/api/challenges/run` | POST | Execute code against test cases |
+| `/api/challenges/verify` | POST | AI verification of solution |
 
-### Tavily API (Optional)
-- Sign up at [tavily.com](https://tavily.com)
-- Used for: Industry trends and job market data
+### Resume & Matching APIs
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/resume/analyze` | POST | AI resume analysis |
+| `/api/resume/parse` | POST | Extract text from resume |
+| `/api/resume/upload` | POST | Upload resume file |
+| `/api/matching/route` | POST | Job-candidate matching score |
+
+### Proctoring APIs
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/proctoring/events` | POST | Log proctoring event |
+| `/api/proctoring/summary` | GET | Get proctoring summary |
+| `/api/proctoring/upload` | POST | Upload proctoring media |
+
+### Scoring APIs
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/scoring/calculate` | POST | Calculate overall score |
+| `/api/scoring/technical` | POST | Score technical assessment |
+| `/api/scoring/psychometric` | POST | Score psychometric profile |
+| `/api/decision/route` | POST | Generate hiring decision |
 
 ---
 
@@ -219,53 +353,115 @@ TalentPulse is a comprehensive multi-modal assessment engine designed to evaluat
 
 ```
 src/
-├── app/                      # Next.js App Router
-│   ├── assessment/           # Multi-modal assessment page
-│   ├── challenges/           # Coding sandbox
-│   ├── psychometric/         # Slider-based assessment
-│   ├── results/              # Assessment results dashboard
-│   ├── (auth)/login/         # Email/password authentication
-│   ├── (dashboard)/          # User dashboard
-│   └── api/                  # API routes
+├── app/                          # Next.js App Router
+│   ├── (auth)/login/             # Authentication pages
+│   ├── (dashboard)/              # Dashboard layout
+│   ├── assessment/[token]/       # Assessment flow
+│   │   ├── check/                # Pre-assessment check
+│   │   ├── instructions/         # Assessment instructions
+│   │   ├── verify/               # Identity verification
+│   │   ├── review/               # Review before submit
+│   │   └── complete/             # Completion page
+│   ├── candidate/                # Candidate portal
+│   │   ├── dashboard/            # Candidate dashboard
+│   │   ├── profile/              # Profile management
+│   │   ├── onboarding/           # New user onboarding
+│   │   └── resume/               # Resume upload
+│   ├── challenges/[id]/          # Coding challenges
+│   ├── jobs/[id]/                # Job details & application
+│   ├── psychometric/             # Psychometric assessment
+│   ├── technical/                # Technical assessment
+│   ├── results/                  # Results dashboard
+│   └── api/                      # API routes
+│
 ├── components/
-│   ├── assessment/           # Assessment components
-│   │   ├── slider-question.tsx
-│   │   ├── text-response.tsx
-│   │   └── scenario-mcq.tsx
-│   ├── ui/                   # Radix UI components
-│   └── effects/              # Animation components
+│   ├── assessment/               # Assessment UI components
+│   │   ├── scenario-mcq.tsx      # MCQ component
+│   │   ├── slider-question.tsx   # Psychometric sliders
+│   │   └── text-response.tsx     # Text response input
+│   ├── coding/
+│   │   └── code-editor.tsx       # Monaco editor wrapper
+│   ├── proctoring/
+│   │   └── proctor-monitor.tsx   # Proctoring component
+│   ├── ui/                       # Radix UI components
+│   ├── layout/                   # Header, navigation
+│   ├── effects/                  # Animation components
+│   └── providers/                # Context providers
+│
 ├── lib/
-│   ├── supabase/             # Supabase client
-│   ├── groq/                 # Groq AI client
-│   ├── piston/               # Code execution client
-│   └── execution/            # Browser-based execution
-└── types/                    # TypeScript definitions
+│   ├── supabase/                 # Supabase client (client/server/middleware)
+│   ├── groq/                     # Groq AI client
+│   ├── piston/                   # Code execution client
+│   ├── proctoring/               # Proctoring services
+│   │   ├── face-detection-service.ts
+│   │   ├── hand-detection-service.ts
+│   │   └── recording-service.ts
+│   ├── scoring/                  # Scoring algorithms
+│   └── execution/                # Browser code execution
+│
+├── stores/                       # Zustand stores
+├── hooks/                        # Custom React hooks
+└── types/                        # TypeScript definitions
 ```
 
 ---
 
-## 🚀 API Endpoints
+## 🚀 Deployment
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/assessment/generate` | POST | Generate assessment questions |
-| `/api/assessment/submit` | POST | Submit and score assessment |
-| `/api/challenges/generate` | POST | Generate coding challenge |
-| `/api/challenges/run` | POST | Execute code against test cases |
-| `/api/challenges/verify` | POST | AI verification of solution |
+### Vercel (Recommended)
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+
+# Set environment variables in Vercel Dashboard
+```
+
+### Docker
+```dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+```
 
 ---
 
-## 📝 License
+## 🔧 Configuration
 
-MIT License - feel free to use this project for learning and development.
+### Proctoring Settings
+Edit threshold values in `src/components/proctoring/proctor-monitor.tsx`:
+```typescript
+const DETECTION_INTERVAL_MS = 100;      // Detection frequency
+const NO_FACE_THRESHOLD_MS = 3000;      // Grace period for no face
+const LOOKING_AWAY_THRESHOLD_MS = 2000; // Grace period for looking away
+```
+
+### Scoring Weights
+Edit deduction values in the `EVENT_CONFIG` object for custom integrity scoring.
+
+---
+
+## 📄 License
+
+MIT License - feel free to use for learning, development, and production.
 
 ---
 
 <div align="center">
 
-**Built with ❤️ using Next.js, Supabase, and Groq AI**
+### Built with ❤️ by HIRENEX Team
 
-⚡ TalentPulse - Multi-Modal Assessment Engine
+**Next.js** • **Supabase** • **Groq AI** • **MediaPipe** • **TensorFlow.js**
+
+---
+
+[⬆ Back to Top](#-hirenex---candidate-portal)
 
 </div>
