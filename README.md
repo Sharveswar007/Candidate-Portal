@@ -13,6 +13,10 @@
 
 *Enterprise-grade candidate assessment platform with AI-powered proctoring, multi-modal evaluations, resume analysis, and job matching.*
 
+<br />
+<img src="./public/hero.png" alt="HIRENEX Candidate Portal Home" width="100%" />
+<br />
+
 [Features](#features) • [Proctoring](#advanced-proctoring-system) • [Installation](#installation) • [Structure](#project-structure)
 
 </div>
