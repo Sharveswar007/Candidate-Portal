@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 HIRENEX - Candidate Portal
+# HIRENEX - Candidate Portal
 
 ### AI-Powered Recruitment Assessment Platform
 
@@ -13,29 +13,29 @@
 
 *Enterprise-grade candidate assessment platform with AI-powered proctoring, multi-modal evaluations, resume analysis, and job matching.*
 
-[🎯 Features](#-features) • [🔒 Proctoring](#-advanced-proctoring-system) • [🛠️ Installation](#%EF%B8%8F-installation) • [📁 Structure](#-project-structure)
+[Features](#features) • [Proctoring](#advanced-proctoring-system) • [Installation](#installation) • [Structure](#project-structure)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [Advanced Proctoring System](#-advanced-proctoring-system)
-- [Assessment Engine](#-assessment-engine)
-- [Tech Stack](#-tech-stack)
-- [Installation](#%EF%B8%8F-installation)
-- [Environment Variables](#-environment-variables)
-- [Database Setup](#-database-setup)
-- [API Endpoints](#-api-endpoints)
-- [Project Structure](#-project-structure)
-- [Deployment](#-deployment)
+- [Overview](#overview)
+- [Features](#features)
+- [Advanced Proctoring System](#advanced-proctoring-system)
+- [Assessment Engine](#assessment-engine)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Database Setup](#database-setup)
+- [API Endpoints](#api-endpoints)
+- [Project Structure](#project-structure)
+- [Deployment](#deployment)
 
 ---
 
-## 🎯 Overview
+## Overview
 
 HIRENEX is a comprehensive AI-powered recruitment assessment platform designed to streamline the hiring process. The candidate portal enables job seekers to browse opportunities, submit resumes, and complete rigorous multi-stage assessments - all while being monitored by an enterprise-grade proctoring system.
 
@@ -43,42 +43,42 @@ HIRENEX is a comprehensive AI-powered recruitment assessment platform designed t
 
 | Feature | Benefit |
 |---------|---------|
-| **AI-Powered Assessments** | Dynamic question generation tailored to job requirements |
-| **Real-Time Proctoring** | Face detection, hand tracking, and browser monitoring |
-| **Multi-Modal Evaluation** | MCQs, coding challenges, text responses & psychometric tests |
-| **Smart Resume Analysis** | AI parsing with job description matching |
-| **Secure Environment** | Anti-cheat mechanisms with integrity scoring |
+| **AI-Powered Assessments**| Dynamic question generation tailored to job requirements |
+| **Real-Time Proctoring**| Face detection, hand tracking, and browser monitoring |
+| **Multi-Modal Evaluation**| MCQs, coding challenges, text responses & psychometric tests |
+| **Smart Resume Analysis**| AI parsing with job description matching |
+| **Secure Environment**| Anti-cheat mechanisms with integrity scoring |
 
 ---
 
-## ✨ Features
+## Features
 
-### 📄 **AI Resume Analysis**
+### **AI Resume Analysis**
 - **Intelligent Parsing**: Extract skills, experience, education, and certifications using Groq AI
 - **Job Matching Score**: Automated compatibility scoring against job descriptions
 - **Strength/Weakness Analysis**: AI-generated insights on candidate profiles
 - **PDF/Document Support**: Parse multiple resume formats with unpdf
 
-### 💼 **Job Board & Applications**
+### **Job Board & Applications**
 - Browse and filter open positions
 - Detailed job descriptions with requirements
 - One-click applications with resume attachment
 - Application status tracking and progress monitoring
 
-### 📋 **Scenario-Based MCQs**
+### **Scenario-Based MCQs**
 - Real-world workplace scenarios with multiple-choice responses
 - Categories: Workplace Ethics, Team Dynamics, Client Relations, Priority Management
 - AI-generated diverse question bank using Groq LLM
 - Immediate feedback with detailed explanations
 
-### 💻 **Coding Sandbox**
-- Full-featured IDE powered by **Monaco Editor** (VS Code's engine)
-- **Real code execution** using [Piston API](https://github.com/engineer-man/piston)
-- **50+ programming languages** supported: JavaScript, Python, Java, C++, TypeScript, Go, Rust, and more
+### **Coding Sandbox**
+- Full-featured IDE powered by **Monaco Editor**(VS Code's engine)
+- **Real code execution**using [Piston API](https://github.com/engineer-man/piston)
+- **50+ programming languages**supported: JavaScript, Python, Java, C++, TypeScript, Go, Rust, and more
 - AI-generated coding problems with visible and hidden test cases
 - Performance metrics: execution time, memory usage, and complexity analysis
 
-### ✍️ **Text-Based Responses**
+### **Text-Based Responses**
 - Open-ended questions for written communication evaluation
 - AI-powered analysis scoring:
   - Communication clarity
@@ -87,7 +87,7 @@ HIRENEX is a comprehensive AI-powered recruitment assessment platform designed t
   - Professional tone
 - Timed responses with live progress tracking
 
-### 📊 **Psychometric Profiling**
+### **Psychometric Profiling**
 - Big Five personality assessment (OCEAN model)
 - Quantitative slider-based self-assessment
 - Dimensions measured:
@@ -98,7 +98,7 @@ HIRENEX is a comprehensive AI-powered recruitment assessment platform designed t
   - Emotional Stability
 - Leadership style and problem-solving approach mapping
 
-### 📈 **Results Dashboard**
+### **Results Dashboard**
 - Comprehensive job-readiness score
 - Score breakdown by assessment type
 - Personality radar chart visualization
@@ -107,9 +107,9 @@ HIRENEX is a comprehensive AI-powered recruitment assessment platform designed t
 
 ---
 
-## 🔒 Advanced Proctoring System
+## Advanced Proctoring System
 
-HIRENEX features an enterprise-grade proctoring solution using **MediaPipe** and **TensorFlow.js** for real-time monitoring.
+HIRENEX features an enterprise-grade proctoring solution using **MediaPipe**and **TensorFlow.js**for real-time monitoring.
 
 ### Face Detection (MediaPipe BlazeFace)
 | Detection Type | Severity | Description |
@@ -144,7 +144,7 @@ HIRENEX features an enterprise-grade proctoring solution using **MediaPipe** and
 
 ---
 
-## 🎓 Assessment Engine
+## Assessment Engine
 
 ### Assessment Flow
 ```
@@ -165,54 +165,54 @@ HIRENEX features an enterprise-grade proctoring solution using **MediaPipe** and
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Core Framework
 | Category | Technology | Version |
 |----------|------------|---------|
-| **Framework** | Next.js (App Router) | 16.1 |
-| **Language** | TypeScript | 5.0 |
-| **UI Library** | React | 19.2 |
-| **Database** | Supabase (PostgreSQL) | Latest |
-| **Authentication** | Supabase Auth | SSR |
+| **Framework**| Next.js (App Router) | 16.1 |
+| **Language**| TypeScript | 5.0 |
+| **UI Library**| React | 19.2 |
+| **Database**| Supabase (PostgreSQL) | Latest |
+| **Authentication**| Supabase Auth | SSR |
 
 ### AI & Machine Learning
 | Service | Purpose |
 |---------|---------|
-| **Groq API** | LLM for question generation, resume analysis, scoring |
-| **MediaPipe Tasks Vision** | Real-time face detection (BlazeFace) |
-| **TensorFlow.js** | Hand pose detection and tracking |
-| **face-api.js** | Fallback face detection |
+| **Groq API**| LLM for question generation, resume analysis, scoring |
+| **MediaPipe Tasks Vision**| Real-time face detection (BlazeFace) |
+| **TensorFlow.js**| Hand pose detection and tracking |
+| **face-api.js**| Fallback face detection |
 
 ### Frontend & UI
 | Technology | Purpose |
 |------------|---------|
-| **Tailwind CSS 4** | Utility-first styling |
-| **Framer Motion** | Animations and transitions |
-| **GSAP** | Advanced animations |
-| **Radix UI** | Accessible component primitives |
-| **Lucide React** | Icon system |
-| **Recharts** | Data visualization |
+| **Tailwind CSS 4**| Utility-first styling |
+| **Framer Motion**| Animations and transitions |
+| **GSAP**| Advanced animations |
+| **Radix UI**| Accessible component primitives |
+| **Lucide React**| Icon system |
+| **Recharts**| Data visualization |
 
 ### Developer Tools
 | Technology | Purpose |
 |------------|---------|
-| **Monaco Editor** | In-browser code editor (VS Code engine) |
-| **Piston API** | Sandboxed code execution (50+ languages) |
-| **TanStack Query** | Server state management |
-| **Zustand** | Client state management |
-| **Zod** | Runtime type validation |
-| **RecordRTC** | Video/audio recording |
+| **Monaco Editor**| In-browser code editor (VS Code engine) |
+| **Piston API**| Sandboxed code execution (50+ languages) |
+| **TanStack Query**| Server state management |
+| **Zustand**| Client state management |
+| **Zod**| Runtime type validation |
+| **RecordRTC**| Video/audio recording |
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 ### Prerequisites
-- **Node.js** 18+ (LTS recommended)
+- **Node.js**18+ (LTS recommended)
 - **npm**, **yarn**, **pnpm**, or **bun**
-- **Supabase** account (free tier available)
-- **Groq** API key (free tier available)
+- **Supabase**account (free tier available)
+- **Groq**API key (free tier available)
 
 ### Quick Start
 
@@ -269,15 +269,15 @@ CLOUDINARY_URL=cloudinary://api_key:api_secret@cloud_name
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `NEXT_PUBLIC_SUPABASE_URL` | ✅ | Your Supabase project URL |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | ✅ | Supabase anonymous/public key |
-| `GROQ_API_KEY` | ✅ | Groq API key for AI features |
-| `TAVILY_API_KEY` | ❌ | Web search for job market data |
-| `CLOUDINARY_URL` | ❌ | Media upload and storage |
+| `NEXT_PUBLIC_SUPABASE_URL` | Yes | Your Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Yes | Supabase anonymous/public key |
+| `GROQ_API_KEY` | Yes | Groq API key for AI features |
+| `TAVILY_API_KEY` | No | Web search for job market data |
+| `CLOUDINARY_URL` | No | Media upload and storage |
 
 ---
 
-## 🗄️ Database Setup
+## Database Setup
 
 ### 1. Create Supabase Project
 1. Go to [supabase.com](https://supabase.com) and create a new project
@@ -307,7 +307,7 @@ Execute the SQL files in `supabase/migrations/` in order:
 
 ---
 
-## 🚀 API Endpoints
+## API Endpoints
 
 ### Assessment APIs
 | Endpoint | Method | Description |
@@ -349,7 +349,7 @@ Execute the SQL files in `supabase/migrations/` in order:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -406,7 +406,7 @@ src/
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 ```bash
@@ -433,7 +433,7 @@ CMD ["npm", "start"]
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 ### Proctoring Settings
 Edit threshold values in `src/components/proctoring/proctor-monitor.tsx`:
@@ -448,7 +448,7 @@ Edit deduction values in the `EVENT_CONFIG` object for custom integrity scoring.
 
 ---
 
-## 📄 License
+## License
 
 MIT License - feel free to use for learning, development, and production.
 
@@ -456,12 +456,12 @@ MIT License - feel free to use for learning, development, and production.
 
 <div align="center">
 
-### Built with ❤️ by HIRENEX Team
+### Built by HIRENEX Team
 
 **Next.js** • **Supabase** • **Groq AI** • **MediaPipe** • **TensorFlow.js**
 
 ---
 
-[⬆ Back to Top](#-hirenex---candidate-portal)
+[Back to Top](#hirenex---candidate-portal)
 
 </div>
